@@ -1,0 +1,30 @@
+import Button from '../Button';
+
+const HeroText = () => {
+  return (
+    <div className='flex items-center justify-center flex-col'>
+      <div className='space-y-4'>
+        <h1 className='text-2xl font-bold text-center md:text-left md:text-5xl'>
+          Halo, Saya<span className='text-blue-800'> Reza Aditama</span>
+        </h1>
+        <p className='text-justify leading-tight tracking-wide text-base'>
+          Saya seorang <span className='font-bold'>Frontend Developer</span>{' '}
+          yang fokus pada ekosistem JavaScript, terutama menggunakan React
+          sebagai framework utama. Saya terbiasa menggunakan Vite sebagai tools
+          pengembangan frontend, dan mengimplementasikan tampilan yang responsif
+          dengan Tailwind CSS.
+        </p>
+        <div className='space-x-4 flex justify-center'>
+          <Button variant='primary' className='w-1/2 md:w-1/3' to='about'>
+            Tentang Saya
+          </Button>
+          <Button variant='secondary' className='w-1/2 md:w-1/3' to='project'>
+            Lihat Proyek
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroText;
