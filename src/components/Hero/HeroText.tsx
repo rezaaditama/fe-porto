@@ -9,10 +9,9 @@ const HeroText = () => {
         </h1>
         <p className='text-justify leading-tight tracking-wide text-base'>
           Saya seorang <span className='font-bold'>Frontend Developer</span>{' '}
-          yang fokus pada ekosistem JavaScript, terutama menggunakan React
-          sebagai framework utama. Saya terbiasa menggunakan Vite sebagai tools
-          pengembangan frontend, dan mengimplementasikan tampilan yang responsif
-          dengan Tailwind CSS.
+          yang fokus pada pengembangan UI dengan React + Vite dan Tailwind CSS.
+          Saya senang membangun antarmuka yang cepat, responsif dan efisien
+          menggunakan ekosistem JavaScript modern.
         </p>
         <div className='space-x-4 flex justify-center'>
           <Button variant='primary' className='w-1/2 md:w-1/3' to='about'>
