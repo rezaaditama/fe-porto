@@ -16,7 +16,7 @@ const AvailableIcon = ({
       width={size}
       height={size}
       viewBox='0 0 64 64'
-      enable-background='new 0 0 64 64'
+      enableBackground='new 0 0 64 64'
       fill={color}
       className={className}
     >

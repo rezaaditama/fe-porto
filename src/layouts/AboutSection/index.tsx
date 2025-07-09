@@ -1,10 +1,16 @@
-import HeroImage from '../../components/Hero/HeroImage';
+// import HeroImage from '../../components/Hero/HeroImage';
+import { useEffect } from 'react';
 import AvailableIcon from '../../components/Icons/AvailableIcon';
 import EducationIcon from '../../components/Icons/EducationIcon';
 import FocusIcon from '../../components/Icons/FocusIcon';
 import InfoItem from '../../components/InfoItem';
+import { getLanguagePercentage } from '../../services/skill.service.ts';
 
 const AboutSection = () => {
+  useEffect(() => {
+    getLanguagePercentage();
+  }, []);
+
   return (
     <div
       id='about'
