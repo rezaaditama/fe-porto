@@ -1,15 +1,48 @@
 // import HeroImage from '../../components/Hero/HeroImage';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AvailableIcon from '../../components/Icons/AvailableIcon';
 import EducationIcon from '../../components/Icons/EducationIcon';
 import FocusIcon from '../../components/Icons/FocusIcon';
 import InfoItem from '../../components/InfoItem';
-import { getLanguagePercentage } from '../../services/skill.service.ts';
+import { getAllSkill } from '../../services/skill.service.ts';
+import BarChartHorizontal from '../../components/Chart/BarChartHorizontal.tsx';
 
 const AboutSection = () => {
+  const [skills, setSkills] = useState([]);
   useEffect(() => {
-    getLanguagePercentage();
+    // const fetchSkills = async () => {
+    //   const response = await getAllSkill();
+    //   const data = response.map(
+    //     (skill: { language: string; percentage: number }) => ({
+    //       label: skill.language,
+    //       value: skill.percentage,
+    //     })
+    //   );
+    //   setSkills(data);
+    //   console.log(skills);
+    // };
+    fetchSkill();
   }, []);
+
+  const fetchSkill = async () => {
+    try {
+      const response = await getAllSkill();
+      console.log(response);
+      const data = response.map(
+        (skill: { language: string; percentage: number }) => ({
+          label: skill.language,
+          value: skill.percentage,
+        })
+      );
+      setSkills(data);
+    } catch (error) {
+      console.log('error fething : ', error);
+    }
+  };
+
+  useEffect(() => {
+    console.log('Updated skills:', skills);
+  }, [skills]);
 
   return (
     <div
@@ -61,7 +94,12 @@ const AboutSection = () => {
         {/* <section className='items-center justify-center hidden md:flex'>
           <HeroImage />
         </section> */}
-        <section className='shadow-xl py-6 px-6 rounded-xl flex flex-col md:px-4'></section>
+        <section className='shadow-xl py-6 px-6 rounded-xl flex flex-col space-y-2 justify-center md:px-4'>
+          <h1 className='text-center font-extrabold text-xl'>
+            Bahasa Pemrograman
+          </h1>
+          <BarChartHorizontal data={skills} />
+        </section>
       </div>
     </div>
   );

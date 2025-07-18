@@ -15,6 +15,7 @@ export const fetchUserRepos = async (): Promise<Repo[] | undefined> => {
     );
     console.log(response);
     const nonFork = response.data.filter((repo) => !repo.fork);
+    console.log('1', nonFork);
     return nonFork;
   } catch (error) {
     console.log('error : ', error);
@@ -57,4 +58,15 @@ export const getLanguagePercentage = async (): Promise<
   }
   console.log(percentages);
   return percentages;
+};
+
+export const getAllSkill = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/api/skills/');
+    // console.log(response.data.data);
+    return response.data.data;
+  } catch (error) {
+    console.log('error : ', error);
+    return [];
+  }
 };
