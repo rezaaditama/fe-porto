@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   BarChart,
   Bar,
@@ -14,19 +13,17 @@ type chartData = {
   value: number;
 };
 
-type BarChartHorizontalProps = {
+type BarChartHorizontalDiagramProps = {
   data: chartData[];
   maxValue?: number;
 };
 
-const BarChartHorizontal = ({
+const BarChartHorizontalDiagram = ({
   data,
   maxValue = 100,
-}: BarChartHorizontalProps) => {
+}: BarChartHorizontalDiagramProps) => {
   const COLORS = ['#1e3a8a', '#0f172a'];
-  useEffect(() => {
-    console.log('BarChartHorizontal received data:', data);
-  }, [data]);
+
   return (
     <div className='w-full h-auto'>
       <ResponsiveContainer width={'100%'} height={data.length * 45}>
@@ -56,4 +53,4 @@ const BarChartHorizontal = ({
   );
 };
 
-export default BarChartHorizontal;
+export default BarChartHorizontalDiagram;

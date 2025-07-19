@@ -5,29 +5,19 @@ import EducationIcon from '../../components/Icons/EducationIcon';
 import FocusIcon from '../../components/Icons/FocusIcon';
 import InfoItem from '../../components/InfoItem';
 import { getAllSkill } from '../../services/skill.service.ts';
-import BarChartHorizontal from '../../components/Chart/BarChartHorizontal.tsx';
+import GithubHeadMap from '../../components/GithubHeatMap/index.tsx';
+import PieChartDiagram from '../../components/Chart/PieChartDiagram.tsx';
+
+type Skill = {
+  label: string;
+  value: number;
+};
 
 const AboutSection = () => {
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState<Skill[]>([]);
   useEffect(() => {
-    // const fetchSkills = async () => {
-    //   const response = await getAllSkill();
-    //   const data = response.map(
-    //     (skill: { language: string; percentage: number }) => ({
-    //       label: skill.language,
-    //       value: skill.percentage,
-    //     })
-    //   );
-    //   setSkills(data);
-    //   console.log(skills);
-    // };
-    fetchSkill();
-  }, []);
-
-  const fetchSkill = async () => {
-    try {
+    const fetchSkills = async () => {
       const response = await getAllSkill();
-      console.log(response);
       const data = response.map(
         (skill: { language: string; percentage: number }) => ({
           label: skill.language,
@@ -35,28 +25,21 @@ const AboutSection = () => {
         })
       );
       setSkills(data);
-    } catch (error) {
-      console.log('error fething : ', error);
-    }
-  };
-
-  useEffect(() => {
-    console.log('Updated skills:', skills);
-  }, [skills]);
+      console.log(skills);
+    };
+    fetchSkills();
+  }, []);
 
   return (
-    <div
-      id='about'
-      className='scroll-mt-24 bg-gray-50 w-full py-7 min-h-screen'
-    >
-      <h1 className='text-center text-2xl font-extrabold text-blue-800'>
-        Tentang Saya
-      </h1>
-      <div className='grid px-10 gap-5 md:mt-5 md:grid-cols-2'>
-        <section className='shadow-xl py-6 px-6 rounded-xl flex flex-col md:px-4'>
+    <div id='about' className='bg-gray-50 w-full py-7'>
+      <div className='grid px-10 grid-cols-1 gap-5 md:grid-cols-2'>
+        <section className='shadow-md py-4 px-6 rounded-xl flex flex-col bg-gray-50 md:px-4'>
+          <h1 className='text-center font-bold text-xl text-blue-800 pb-3'>
+            Tentang Saya
+          </h1>
           <div>
             <div>
-              <p className=' text-wrap text-justify leading-tight tracking-wide text-base max-w-prose'>
+              <p className='text-wrap text-justify leading-tight tracking-wide text-base'>
                 Saya adalah seorang Frontend Developer yang fokus pada
                 pengembangan antarmuka pengguna (UI) modern. Saya menggunakan
                 React sebagai library utama, didukung oleh Vite untuk proses
@@ -67,7 +50,7 @@ const AboutSection = () => {
                 skalabilitas.
               </p>
             </div>
-            <div className='gap-y-6 flex flex-col mt-5'>
+            <div className='gap-y-4 flex flex-col mt-5'>
               <InfoItem
                 bgColor='bg-blue-100'
                 title='Education'
@@ -91,14 +74,19 @@ const AboutSection = () => {
             </div>
           </div>
         </section>
-        {/* <section className='items-center justify-center hidden md:flex'>
-          <HeroImage />
-        </section> */}
-        <section className='shadow-xl py-6 px-6 rounded-xl flex flex-col space-y-2 justify-center md:px-4'>
-          <h1 className='text-center font-extrabold text-xl'>
-            Bahasa Pemrograman
+        <section className='shadow-md rounded-xl w-full p-6 flex flex-col items-center justify-center h-96 md:h-full'>
+          <h1 className='text-center font-bold text-blue-800 text-xl'>
+            Github Activity Language
           </h1>
-          <BarChartHorizontal data={skills} />
+          <PieChartDiagram data={skills} />
+        </section>
+        <section className='md:col-span-2 flex flex-col items-center'>
+          <div className='w-full space-y-2 shadow-md p-4 rounded-xl md:w-fit'>
+            <h1 className='font-bold text-blue-800 text-xl text-center'>
+              Github Commit Activity
+            </h1>
+            <GithubHeadMap username='rezaaditama' />
+          </div>
         </section>
       </div>
     </div>

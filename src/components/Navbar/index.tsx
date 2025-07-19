@@ -2,8 +2,9 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const linkClass =
-    'text-lg text-black/50 cursor-pointer transition duration-300 hover:text-yellow-500';
-  const activeClass = 'font-bold text-xl text-blue-700 cursor-pointer';
+    'text-lg text-black/50 cursor-pointer transition duration-300 hover:text-yellow-500 hover:underline hover:decoration-4';
+  const activeClass =
+    'font-bold text-xl text-blue-700 cursor-pointer underline decoration-4';
   return (
     <nav className='w-full flex justify-center fixed top-3 z-50'>
       <div className='px-10 py-5 border-b w-[95vw] border-gray-200 backdrop-blur-sm bg-white/80 shadow-sm grid grid-cols-2 md:grid-cols-3'>
