@@ -25,11 +25,10 @@ const PieChartDiagram = ({ data }: PieChartDiagramProps) => {
     '#c026d3',
   ];
   const isMd = useMediaQuery({ query: '(min-width: 768px)' });
-  const outerRadius = isMd ? 130 : 80;
 
   return (
-    <div className='w-[50vh] h-[50vh] md:w-full md:h-full'>
-      <ResponsiveContainer>
+    <div className='w-full aspect-square max-w-md mx-auto rounded-xl'>
+      <ResponsiveContainer width='100%' height='100%'>
         <PieChart>
           <Pie
             data={data}
@@ -37,8 +36,8 @@ const PieChartDiagram = ({ data }: PieChartDiagramProps) => {
             nameKey='label'
             cx='50%'
             cy='50%'
-            outerRadius={outerRadius}
-            fill={'#8884d8'}
+            outerRadius={isMd ? 120 : 80}
+            fill='#8884d8'
             label
           >
             {data.map((_entry, index) => (

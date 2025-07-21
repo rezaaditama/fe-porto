@@ -33,8 +33,8 @@ const AboutSection = () => {
   return (
     <div id='about' className='bg-gray-50 w-full py-7'>
       <div className='grid px-10 grid-cols-1 gap-5 md:grid-cols-2'>
-        <section className='shadow-md py-4 px-6 rounded-xl flex flex-col bg-gray-50 md:px-4'>
-          <h1 className='text-center font-bold text-xl text-blue-800 pb-3'>
+        <section className='shadow-md py-4 px-6 rounded-xl flex flex-col bg-gray-50 space-y-4 md:px-4'>
+          <h1 className='text-center font-bold text-xl text-blue-800'>
             Tentang Saya
           </h1>
           <div>
@@ -74,19 +74,17 @@ const AboutSection = () => {
             </div>
           </div>
         </section>
-        <section className='shadow-md rounded-xl w-full p-6 flex flex-col items-center justify-center h-96 md:h-full'>
+        <section className='shadow-md py-4 px-6 rounded-xl space-y-4 bg-gray-50 md:px-4'>
           <h1 className='text-center font-bold text-blue-800 text-xl'>
             Github Activity Language
           </h1>
           <PieChartDiagram data={skills} />
         </section>
-        <section className='md:col-span-2 flex flex-col items-center'>
-          <div className='w-full space-y-2 shadow-md p-4 rounded-xl md:w-fit'>
-            <h1 className='font-bold text-blue-800 text-xl text-center'>
-              Github Commit Activity
-            </h1>
-            <GithubHeadMap username='rezaaditama' />
-          </div>
+        <section className='md:col-span-2 shadow-md p-4 space-y-2 rounded-xl'>
+          <h1 className='font-bold text-blue-800 text-xl text-center'>
+            Github Commit Activity
+          </h1>
+          <GithubHeadMap username={'rezaaditama'}></GithubHeadMap>
         </section>
       </div>
     </div>

@@ -6,7 +6,7 @@ type GithubHeadMapProps = {
 
 const GithubHeadMap = ({ username }: GithubHeadMapProps) => {
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-x-auto'>
       <GitHubCalendar
         username={username}
         blockSize={18}
