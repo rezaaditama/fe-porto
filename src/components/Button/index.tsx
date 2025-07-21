@@ -19,7 +19,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyle =
-    'py-2 px-4 rounded-lg font-bold transition text-base md:py-2 md:text-lg cursor-pointer text-center aria-label';
+    'py-2 px-4 rounded-lg font-bold transition cursor-pointer text-center aria-label';
 
   const variantClass = {
     primary: 'bg-slate-900 text-white hover:bg-slate-950',

@@ -14,10 +14,10 @@ const HeroText = () => {
           menggunakan ekosistem JavaScript modern.
         </p>
         <div className='space-x-4 flex justify-center'>
-          <Button variant='primary' className='w-1/2 md:w-1/3' to='about'>
+          <Button variant='primary' className='w-full' to='about'>
             Tentang Saya
           </Button>
-          <Button variant='secondary' className='w-1/2 md:w-1/3' to='project'>
+          <Button variant='secondary' className='w-full' to='project'>
             Lihat Proyek
           </Button>
         </div>
