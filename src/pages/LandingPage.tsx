@@ -3,16 +3,18 @@ import AboutSection from '../layouts/AboutSection';
 import ContactSection from '../layouts/ContactSection';
 import HomeSection from '../layouts/HomeSection';
 import ProjectSection from '../layouts/ProjectSection';
+import Footer from '../layouts/Footer';
 
 const LandingPage = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <HomeSection />
       <AboutSection />
       <ProjectSection />
       <ContactSection />
-    </div>
+      <Footer />
+    </>
   );
 };
 
