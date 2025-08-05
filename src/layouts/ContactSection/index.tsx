@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import EmailIcon from '../../components/Icons/EmailIcon';
 import LocationIcon from '../../components/Icons/LocationIcon';
-import PhoneIcon from '../../components/Icons/PhoneIcon';
 import InfoItem from '../../components/InfoItem';
+import DownloadIcon from '../../components/Icons/DownloadIcon';
 
 const ContactSection = () => {
   return (
@@ -16,8 +16,8 @@ const ContactSection = () => {
           lainnya. Ayo mulai percakapan!
         </p>
       </div>
-      <div className='pt-10 grid grid-cols-2 gap-10 px-10'>
-        <div className='bg-white rounded-md border-1 p-5 border-gray-200 shadow-md'>
+      <div className='pt-10 grid grid-cols-2 gap-x-10 px-10'>
+        <div className='bg-white rounded-md border-1 p-5 h-fit border-gray-200 shadow-md'>
           <h2 className='text-center text-2xl font-bold text-blue-800'>
             Send Me a Message
           </h2>
@@ -82,7 +82,7 @@ const ContactSection = () => {
         </div>
         {/* form selesai */}
         {/* contact mulai */}
-        <div className='grid grid-rows-2'>
+        <div className='grid grid-rows-3 gap-y-2'>
           <div className='bg-white rounded-md border-1 p-5 border-gray-200 shadow-md h-fit'>
             <h2 className='text-center text-2xl font-bold text-blue-800'>
               Contact Information
@@ -131,8 +131,16 @@ const ContactSection = () => {
                 />
                 <h3 className='text-xs text-center font-semibold'>Instagram</h3>
               </Link>
+              <Link
+                to={'https://www.github.com/rezaaditama'}
+                className='p-3 cursor-pointer flex flex-col w-fit bg-gray-100 rounded-md hover:bg-gray-300 transition duration-500 items-center justify-between'
+              >
+                <DownloadIcon size={30} color='#000000' />
+                <h3 className='text-xs text-center font-semibold'>CV ATS</h3>
+              </Link>
             </div>
           </div>
+          {/* connect selesai */}
         </div>
       </div>
     </div>

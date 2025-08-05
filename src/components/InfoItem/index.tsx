@@ -3,8 +3,8 @@ import IconWrapper from '../IconWrapper';
 interface InfoItemProps {
   icon: React.ReactNode;
   bgColor: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   detail?: string;
   className?: string;
 }
