@@ -1,4 +1,4 @@
-import IconWrapper from '../IconWrapper';
+import IconWrapper from './IconWrapper';
 
 interface InfoItemProps {
   icon: React.ReactNode;
@@ -19,7 +19,9 @@ const InfoItem = ({
 }: InfoItemProps) => {
   return (
     <div className={`${className} flex space-x-4 items-center`}>
-      <IconWrapper bgColor={bgColor}>{icon}</IconWrapper>
+      <IconWrapper bgColor={bgColor} className={'p-2'}>
+        {icon}
+      </IconWrapper>
       <div>
         <h2 className='font-bold text-base'>{title}</h2>
         <p className='text-sm leading-tight'>

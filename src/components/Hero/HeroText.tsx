@@ -1,4 +1,4 @@
-import Button from '../Button';
+import { ScrollLink } from '../Navigate';
 
 const HeroText = () => {
   return (
@@ -14,12 +14,16 @@ const HeroText = () => {
           menggunakan ekosistem JavaScript modern.
         </p>
         <div className='space-x-4 flex justify-center'>
-          <Button variant='primary' className='w-full' to='about'>
+          <ScrollLink variant='primary' className='w-full text-lg' to='about'>
             Tentang Saya
-          </Button>
-          <Button variant='secondary' className='w-full' to='project'>
+          </ScrollLink>
+          <ScrollLink
+            variant='secondary'
+            className='w-full text-lg'
+            to='project'
+          >
             Lihat Proyek
-          </Button>
+          </ScrollLink>
         </div>
       </div>
     </div>

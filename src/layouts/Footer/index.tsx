@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll';
 import GithubIcon from '../../components/Icons/GithubIcon';
 import InstagramIcon from '../../components/Icons/InstagramIcon';
+import { RouterLink } from '../../components/Navigate';
+import LinkedinIcon from '../../components/Icons/LinkedinIcon';
 
 const Footer = () => {
   return (
@@ -22,59 +24,44 @@ const Footer = () => {
             Quick Links
           </h1>
           <div className='space-x-5 text-gray-400 text-sm'>
-            <Link
-              className='hover:text-white transition duration-300 cursor-pointer'
-              to='home'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Home
-            </Link>
-            <Link
-              className='hover:text-white transition duration-300 cursor-pointer'
-              to='about'
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              About
-            </Link>
-            <Link
-              className='hover:text-white transition duration-300 cursor-pointer'
-              to='project'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Project
-            </Link>
-            <Link
-              className='hover:text-white transition duration-300 cursor-pointer'
-              to='contact'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              contact
-            </Link>
+            {['home', 'about', 'project', 'contact'].map((section) => (
+              <Link
+                offset={-70}
+                key={section}
+                to={section}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={
+                  'hover:text-white transition duration-300 cursor-pointer'
+                }
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </Link>
+            ))}
           </div>
-          <div className='flex space-x-5'>
-            <Link
+          <div className='flex space-x-3'>
+            <RouterLink
+              variant={'ghost'}
               to={'https://www.github.com/rezaaditama'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
               <GithubIcon color={'#9E9E9E'} size={24} />
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
+              variant={'ghost'}
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
               <InstagramIcon color={'#9E9E9E'} size={24} />
-            </Link>
+            </RouterLink>
+            <RouterLink
+              variant={'ghost'}
+              to={'https://www.instagram.com/reza.aditama._/'}
+              className='cursor-pointer flex flex-col w-fit rounded-md items-center'
+            >
+              <LinkedinIcon color={'#9E9E9E'} size={24} />
+            </RouterLink>
           </div>
         </div>
       </div>

@@ -1,39 +1,43 @@
 import clsx from 'clsx';
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
+import { Link as Scroll } from 'react-scroll';
 
 type Variant = 'primary' | 'secondary';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ScrollLinkProps {
   children: ReactNode;
   variant?: Variant;
-  to?: string;
+  to: string;
+  className?: string;
 }
 
 const baseStyle =
   'font-bold py-2 rounded-md cursor-pointer text-base text-center transition';
-
-const variantClass = {
+const variantClass: Record<Variant, string> = {
   primary: 'bg-slate-800 text-white hover:bg-slate-950',
   secondary: 'bg-yellow-500 text-white hover:bg-yellow-600',
 };
 
-const Button = ({
+const ScrollLink: FC<ScrollLinkProps> = ({
   children,
-  type = 'button',
-  className,
   variant = 'primary',
   to,
+  className,
   ...props
-}: ButtonProps) => {
+}: ScrollLinkProps) => {
   return (
-    <button
+    <Scroll
+      to={to}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
       className={clsx(baseStyle, variantClass[variant], className)}
-      type={type}
       {...props}
     >
       {children}
-    </button>
+    </Scroll>
   );
 };
 
-export default Button;
+export default ScrollLink;
