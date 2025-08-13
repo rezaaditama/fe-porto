@@ -1,13 +1,12 @@
 import clsx from 'clsx';
-import type { FC, ReactNode } from 'react';
-import { Link as Scroll } from 'react-scroll';
+import type { ReactNode } from 'react';
+import { Link as Scroll, type LinkProps } from 'react-scroll';
 
-type Variant = 'primary' | 'secondary';
+type Variant = 'primary' | 'secondary' | 'ghost';
 
-interface ScrollLinkProps {
+interface ScrollLinkProps extends Omit<LinkProps, 'ref'> {
   children: ReactNode;
   variant?: Variant;
-  to: string;
   className?: string;
 }
 
@@ -16,21 +15,19 @@ const baseStyle =
 const variantClass: Record<Variant, string> = {
   primary: 'bg-slate-800 text-white hover:bg-slate-950',
   secondary: 'bg-yellow-500 text-white hover:bg-yellow-600',
+  ghost: 'bg-transparent text-black',
 };
 
-const ScrollLink: FC<ScrollLinkProps> = ({
+const ScrollLink = ({
   children,
   variant = 'primary',
-  to,
   className,
   ...props
 }: ScrollLinkProps) => {
   return (
     <Scroll
-      to={to}
-      spy={true}
-      smooth={true}
-      offset={-70}
+      spy
+      smooth
       duration={500}
       className={clsx(baseStyle, variantClass[variant], className)}
       {...props}

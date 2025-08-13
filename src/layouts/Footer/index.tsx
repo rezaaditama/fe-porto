@@ -46,21 +46,32 @@ const Footer = () => {
               to={'https://www.github.com/rezaaditama'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
-              <GithubIcon color={'#9E9E9E'} size={24} />
+              <GithubIcon
+                size={24}
+                className='text-gray-400 transition duration-300 hover:text-white'
+              />
             </RouterLink>
             <RouterLink
               variant={'ghost'}
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
-              <InstagramIcon color={'#9E9E9E'} size={24} />
+              <InstagramIcon
+                className='text-gray-400 transition duration-300 hover:text-white'
+                size={24}
+              />
             </RouterLink>
             <RouterLink
               variant={'ghost'}
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
-              <LinkedinIcon color={'#9E9E9E'} size={24} />
+              <LinkedinIcon
+                className={
+                  'text-gray-400 transition duration-300 hover:text-white'
+                }
+                size={30}
+              />
             </RouterLink>
           </div>
         </div>
