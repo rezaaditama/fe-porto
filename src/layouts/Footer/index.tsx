@@ -70,7 +70,7 @@ const Footer = () => {
                 className={
                   'text-gray-400 transition duration-300 hover:text-white'
                 }
-                size={30}
+                size={24}
               />
             </RouterLink>
           </div>

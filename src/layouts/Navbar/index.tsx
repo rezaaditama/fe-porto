@@ -2,7 +2,7 @@ import { ScrollLink } from '../../components/Navigate';
 import ThemeToogle from '../../components/Toogle/ThemeToogle';
 
 const linkClass =
-  'text-lg text-black/50 cursor-pointer transition duration-300 hover:text-blue-600 hover:font-medium';
+  'text-lg text-black/50 cursor-pointer transition duration-300 hover:text-blue-600 ';
 const activeClass = 'font-bold text-xl text-blue-800';
 
 const Navbar = () => {

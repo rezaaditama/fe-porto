@@ -32,7 +32,7 @@ const ConnectWithMe = () => {
           url={'https://www.instagram.com/reza.aditama._/'}
           bgColor={'bg-gray-100'}
         >
-          <LinkedinIcon size={35} />
+          <LinkedinIcon size={35} className={'text-black'} />
         </SocialLinkCard>
       </div>
     </div>

@@ -14,13 +14,19 @@ const HeroText = () => {
           menggunakan ekosistem JavaScript modern.
         </p>
         <div className='space-x-4 flex justify-center'>
-          <ScrollLink variant='primary' className='w-full text-lg' to='about'>
+          <ScrollLink
+            variant='primary'
+            className='w-full text-lg'
+            to='about'
+            offset={-70}
+          >
             Tentang Saya
           </ScrollLink>
           <ScrollLink
             variant='secondary'
             className='w-full text-lg'
             to='project'
+            offset={-70}
           >
             Lihat Proyek
           </ScrollLink>

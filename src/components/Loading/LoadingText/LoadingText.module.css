@@ -1,0 +1,15 @@
+@keyframes wave {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+}
+
+.waveAnimation {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
