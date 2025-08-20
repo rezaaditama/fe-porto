@@ -12,7 +12,7 @@ interface RouterLinkProps extends LinkProps {
 }
 
 const baseStyle =
-  'font-bold py-2 rounded-md cursor-pointer text-base text-center transition';
+  'font-bold p-2 rounded-md cursor-pointer text-base text-center transition';
 const variantClass: Record<Exclude<Variant, 'custom'>, string> = {
   primary: 'bg-slate-800 text-white hover:bg-slate-950',
   secondary: 'bg-yellow-500 text-white hover:bg-yellow-600',

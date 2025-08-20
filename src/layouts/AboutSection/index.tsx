@@ -4,15 +4,15 @@ import AboutText from '../../components/About/AboutText.tsx';
 
 const AboutSection = () => {
   return (
-    <div id='about' className='w-full py-7'>
+    <div id='about' className='w-full py-7 dark:bg-surface'>
       <div className='grid px-10 grid-cols-1 gap-5 md:grid-cols-2'>
-        <section className='shadow-md py-4 px-6 rounded-xl flex flex-col border-1 border-gray-200 space-y-4 md:px-4'>
+        <section className='shadow-md border-gray-200 py-4 px-6 rounded-xl flex flex-col border-1 dark:border-primary/50 space-y-4 md:px-4'>
           <AboutText />
         </section>
-        <section className='shadow-md py-4 px-6 rounded-xl space-y-4 border-1 border-gray-200 md:px-4'>
+        <section className='shadow-md border-gray-200 py-4 px-6 rounded-xl space-y-4 border-1 dark:border-primary/50 md:px-4'>
           <AboutDiagram />
         </section>
-        <section className='md:col-span-2 shadow-md p-4 space-y-2 rounded-xl border-1 border-gray-200'>
+        <section className='md:col-span-2 border-gray-200 shadow-md p-4 space-y-2 rounded-xl border-1 dark:border-primary/50'>
           <AboutStats />
         </section>
       </div>

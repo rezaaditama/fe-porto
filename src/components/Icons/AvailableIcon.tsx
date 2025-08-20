@@ -1,24 +1,23 @@
 interface AvailableIconProps {
   size: number;
-  color?: string;
   className?: string;
+  ariaLabel?: string;
 }
 
 const AvailableIcon = ({
   size,
-  color = 'currentColor',
   className,
+  ariaLabel = 'Focus Icon',
 }: AvailableIconProps) => {
   return (
     <svg
-      version='1.0'
-      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 64 64'
+      fill='currentColor'
       width={size}
       height={size}
-      viewBox='0 0 64 64'
-      enableBackground='new 0 0 64 64'
-      fill={color}
       className={className}
+      aria-label={ariaLabel}
+      role='img'
     >
       <path
         d='M32,0C14.327,0,0,14.327,0,32s14.327,32,32,32s32-14.327,32-32S49.673,0,32,0z M49.972,31

@@ -1,1 +1,20 @@
 @import 'tailwindcss';
+@config "../tailwind.config.ts";
+
+:root {
+  --color-primary: 30 64 175; /* blue-800 */
+  --color-secondary: 30 41 59; /* slate-800 */
+  --color-accent: 234 179 8; /* yellow-500 */
+  --color-neutral: 0 0 0; /* black */
+  --color-surface: 245 245 245; /* gray */
+}
+
+.dark {
+  --color-primary: 234 179 8; /* yellow-500 (#eab308) */
+  --color-secondary: 30 64 175; /* blue-800 (#1e40af) */
+  --color-accent: 30 41 59; /* slate-800 (#1e293b) */
+  --color-neutral: 240 240 240; /* gray (#8f8f8f) */
+  --color-surface: 30 41 59; /* white */
+}
+
+/* slate 900 15, 23, 42 */

@@ -2,6 +2,7 @@ import SocialLinkCard from '../Wrapper/SocialLinkCard';
 import GithubIcon from '../Icons/GithubIcon';
 import InstagramIcon from '../Icons/InstagramIcon';
 import LinkedinIcon from '../Icons/LinkedinIcon';
+import DownloadIcon from '../Icons/DownloadIcon';
 
 const ConnectWithMe = () => {
   return (
@@ -9,7 +10,7 @@ const ConnectWithMe = () => {
       <h2 className='text-center text-2xl font-bold text-blue-800'>
         Connect With Me
       </h2>
-      <div className='flex flex-wrap space-x-2 justify-center'>
+      <div className='flex flex-wrap justify-center'>
         <SocialLinkCard
           title={'Github'}
           className='py-2 px-4 hover:bg-gray-300'
@@ -33,6 +34,14 @@ const ConnectWithMe = () => {
           bgColor={'bg-gray-100'}
         >
           <LinkedinIcon size={35} className={'text-black'} />
+        </SocialLinkCard>
+        <SocialLinkCard
+          title={'CV'}
+          className='py-2 px-4 hover:bg-gray-300'
+          url={'https://www.instagram.com/reza.aditama._/'}
+          bgColor={'bg-gray-100'}
+        >
+          <DownloadIcon size={35} className={'text-black'} />
         </SocialLinkCard>
       </div>
     </div>

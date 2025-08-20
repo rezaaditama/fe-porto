@@ -23,13 +23,13 @@ const InfoItem = ({
         {icon}
       </IconWrapper>
       <div>
-        <h2 className='font-bold text-base'>{title}</h2>
-        <p className='text-sm leading-tight'>
+        <h2 className='font-bold text-base text-primary'>{title}</h2>
+        <p className='text-sm leading-tight text-neutral'>
           {description}
           {detail && (
             <>
               <br />
-              <span className='text-gray-600'>{detail}</span>
+              <span className='text-neutral/70'>{detail}</span>
             </>
           )}
         </p>

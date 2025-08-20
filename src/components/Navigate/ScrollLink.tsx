@@ -13,9 +13,10 @@ interface ScrollLinkProps extends Omit<LinkProps, 'ref'> {
 const baseStyle =
   'font-bold py-2 rounded-md cursor-pointer text-base text-center transition';
 const variantClass: Record<Variant, string> = {
-  primary: 'bg-slate-800 text-white hover:bg-slate-950',
-  secondary: 'bg-yellow-500 text-white hover:bg-yellow-600',
-  ghost: 'bg-transparent text-black',
+  primary: 'bg-secondary text-white hover:bg-slate-950 dark:bg-primary',
+  secondary:
+    'bg-accent text-white hover:bg-yellow-600 dark:bg-transparent dark:border dark:border-primary dark:text-primary',
+  ghost: 'bg-transparent',
 };
 
 const ScrollLink = ({
