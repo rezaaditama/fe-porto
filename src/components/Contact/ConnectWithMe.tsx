@@ -6,8 +6,8 @@ import DownloadIcon from '../Icons/DownloadIcon';
 
 const ConnectWithMe = () => {
   return (
-    <div className='bg-white rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50'>
-      <h2 className='text-center text-2xl font-bold text-blue-800'>
+    <div className='bg-surface rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50 dark:border-primary/20 dark:hover:bg-transparent'>
+      <h2 className='text-center text-2xl font-bold text-primary'>
         Connect With Me
       </h2>
       <div className='flex flex-wrap justify-center'>
@@ -17,7 +17,7 @@ const ConnectWithMe = () => {
           url={'https://github.com/rezaaditama'}
           bgColor={'bg-gray-100'}
         >
-          <GithubIcon size={35} />
+          <GithubIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
           title={'Instagram'}
@@ -25,7 +25,7 @@ const ConnectWithMe = () => {
           url={'https://www.instagram.com/reza.aditama._/'}
           bgColor={'bg-gray-100'}
         >
-          <InstagramIcon size={35} />
+          <InstagramIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
           title={'Linkedin'}
@@ -33,7 +33,7 @@ const ConnectWithMe = () => {
           url={'https://www.instagram.com/reza.aditama._/'}
           bgColor={'bg-gray-100'}
         >
-          <LinkedinIcon size={35} className={'text-black'} />
+          <LinkedinIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
           title={'CV'}
@@ -41,7 +41,7 @@ const ConnectWithMe = () => {
           url={'https://www.instagram.com/reza.aditama._/'}
           bgColor={'bg-gray-100'}
         >
-          <DownloadIcon size={35} className={'text-black'} />
+          <DownloadIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
       </div>
     </div>

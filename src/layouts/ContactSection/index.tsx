@@ -4,12 +4,12 @@ import ConnectWithMe from '../../components/Contact/ConnectWithMe';
 
 const ContactSection = () => {
   return (
-    <div id='contact' className='min-h-screen w-full py-10'>
+    <div id='contact' className='min-h-screen w-full py-10 bg-surface'>
       <div className='space-y-3'>
-        <h1 className='text-center font-bold text-3xl capitalize text-blue-800'>
+        <h1 className='text-center font-bold text-3xl capitalize text-primary'>
           Get In Touch
         </h1>
-        <p className='text-center text-gray-500 text-base'>
+        <p className='text-center text-neutral/50 text-base'>
           Saya terbuka untuk magang, proyek freelance atau kolaborasi menarik
           lainnya. Ayo mulai percakapan!
         </p>

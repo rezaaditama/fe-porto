@@ -15,7 +15,7 @@ interface SocialLinkCardProps {
 }
 
 const baseStyle =
-  'w-20 aspect-square flex flex-col items-center justify-center space-y-1 rounded-lg transition duration-300 items-center aspect-square';
+  'w-20 aspect-square flex flex-col items-center justify-center space-y-1 rounded-lg transition duration-300 items-center aspect-square dark:bg-surface';
 
 const SocialLinkCard = ({
   children,
@@ -33,7 +33,9 @@ const SocialLinkCard = ({
         className={clsx(baseStyle, bgColor, className)}
       >
         {children}
-        <span className='text-xs text-center font-semibold'>{title}</span>
+        <span className='text-xs text-center font-semibold text-neutral/80'>
+          {title}
+        </span>
       </IconWrapper>
     </RouterLink>
   );

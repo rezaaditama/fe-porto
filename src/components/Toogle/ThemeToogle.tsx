@@ -1,26 +1,18 @@
-import { useEffect } from 'react';
 import SunIcon from '../Icons/SunIcon';
 import MoonIcon from '../Icons/MoonIcon';
 import clsx from 'clsx';
-import { useTheme } from '../../hooks/useTheme';
+import { useTheme } from '../../context/ThemeContext';
 
 const ThemeToogle = () => {
-  const { theme, toogleTheme } = useTheme();
-
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
       aria-label='Toogle theme'
-      className={clsx(
-        'relative flex items-center rounded-full border p-1 w-16 transition-colors duration-300 focus:outline-none focus:ring-1 focus:ring-secondary/50',
-        theme === 'dark'
-          ? 'border-gray-900 bg-gray-700'
-          : 'bg-gray-100 border-gray-400'
-      )}
-      onClick={toogleTheme}
+      className={
+        'relative flex items-center rounded-full border p-1 w-16 transition-colors duration-300 focus:outline-none focus:ring-1 focus:ring-secondary/50 dark:border-gray-900 dark:bg-gray-700 bg-gray-100 border-gray-400'
+      }
+      onClick={toggleTheme}
     >
       <MoonIcon
         size={24}

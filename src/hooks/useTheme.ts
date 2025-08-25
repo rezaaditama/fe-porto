@@ -21,5 +21,6 @@ export const useTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
+  console.log(theme);
   return { theme, toogleTheme };
 };

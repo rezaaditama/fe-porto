@@ -4,8 +4,8 @@ import LocationIcon from '../Icons/LocationIcon';
 
 const ContactInfo = () => {
   return (
-    <div className='bg-white rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50'>
-      <h2 className='text-center text-2xl font-bold text-blue-800'>
+    <div className='bg-surface rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50 dark:border-primary/20 dark:hover:bg-slate-700/10'>
+      <h2 className='text-center text-2xl font-bold text-primary'>
         Contact Information
       </h2>
       <div className='space-y-5 pt-5'>

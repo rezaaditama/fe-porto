@@ -7,6 +7,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import { useTheme } from '../../context/ThemeContext';
 
 type PieChartDiagramProps = {
   data: {
@@ -16,18 +17,26 @@ type PieChartDiagramProps = {
 };
 
 const PieChartDiagram = ({ data }: PieChartDiagramProps) => {
-  const COLORS = [
-    '#2563eb',
-    '#059669',
-    '#d97706',
-    '#dc2626',
-    '#0d9488',
-    '#c026d3',
-  ];
+  const { theme } = useTheme();
+  const COLORS =
+    theme === 'dark'
+      ? [
+          '#4e79a7',
+          '#f28e2b',
+          '#e15759',
+          '#76b7b2',
+          '#59a14f',
+          '#edc948',
+          '#b07aa1',
+          '#ff9da7',
+        ]
+      : ['#2563eb', '#059669', '#d97706', '#dc2626', '#0d9488', '#c026d3'];
   const isMd = useMediaQuery({ query: '(min-width: 768px)' });
 
+  console.log('tema di diagram ', theme);
+
   return (
-    <div className='w-full aspect-square max-w-md mx-auto rounded-xl'>
+    <div className='w-full aspect-square max-w-md mx-auto rounded-xl text-neutral/80'>
       <ResponsiveContainer width='100%' height='100%'>
         <PieChart>
           <Pie

@@ -6,13 +6,13 @@ import LinkedinIcon from '../../components/Icons/LinkedinIcon';
 
 const Footer = () => {
   return (
-    <footer className='px-10 py-5 bg-slate-950'>
+    <footer className='px-10 py-5 bg-slate-950 dark:bg-surface dark:border-t dark:border-primary/30'>
       <div className='grid grid-cols-2'>
         <div>
-          <h1 className='text-2xl font-bold uppercase text-white'>
+          <h1 className='text-2xl font-bold uppercase text-white dark:text-primary'>
             Reza Aditama
           </h1>
-          <p className='text-justify leading-tight tracking-wide text-sm text-gray-400'>
+          <p className='text-justify leading-tight tracking-wide text-sm text-gray-400 dark:text-neutral/50'>
             Saya seorang<span className='font-bold'> Frontend Developer </span>
             yang fokus pada pengembangan UI dengan React + Vite dan Tailwind
             CSS. Saya senang membangun antarmuka yang cepat, responsif dan
@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
         </div>
         <div className='flex text-white items-center flex-col space-y-2'>
-          <h1 className='text-white font-bold capitalize text-xl'>
+          <h1 className='text-white font-bold capitalize text-xl dark:text-primary'>
             Quick Links
           </h1>
           <div className='space-x-5 text-gray-400 text-sm'>
@@ -33,7 +33,7 @@ const Footer = () => {
                 smooth={true}
                 duration={500}
                 className={
-                  'hover:text-white transition duration-300 cursor-pointer'
+                  'hover:text-white transition duration-300 cursor-pointer dark:hover:text-primary'
                 }
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -48,7 +48,7 @@ const Footer = () => {
             >
               <GithubIcon
                 size={24}
-                className='text-gray-400 transition duration-300 hover:text-white'
+                className='text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
               />
             </RouterLink>
             <RouterLink
@@ -57,7 +57,7 @@ const Footer = () => {
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
               <InstagramIcon
-                className='text-gray-400 transition duration-300 hover:text-white'
+                className='text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
                 size={24}
               />
             </RouterLink>
@@ -68,7 +68,7 @@ const Footer = () => {
             >
               <LinkedinIcon
                 className={
-                  'text-gray-400 transition duration-300 hover:text-white'
+                  'text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
                 }
                 size={24}
               />
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='text-center text-sm text-gray-400 mt-10 border-gray-800 border-t'>
+      <div className='text-center text-sm text-gray-400 mt-10 border-gray-800 border-t dark:border-primary/30'>
         <p className='py-2'>
           © 2025 Reza Aditama - Front End Developer. All Rights Reserved
         </p>

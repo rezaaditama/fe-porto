@@ -19,8 +19,9 @@ const Input = ({
   ...props
 }: InputProps) => {
   const baseStyleInput =
-    'w-full border border-gray-300 py-1.5 rounded-md px-3 focus:outline-gray-300 focus:outline-1';
-  const baseStyleLabel = 'font-semibold text-base text-slate-800';
+    'w-full border border-gray-300 py-1.5 text-neutral placeholder-neutral/90 rounded-md px-3 focus:outline-gray-300 focus:outline-1';
+  const baseStyleLabel =
+    'font-semibold text-base text-slate-800 dark:text-primary';
   return (
     <div>
       {label && (

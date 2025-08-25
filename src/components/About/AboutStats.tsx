@@ -3,10 +3,10 @@ import GithubHeadMap from '../GithubHeatMap';
 const AboutStats = () => {
   return (
     <>
-      <h1 className='font-bold text-blue-800 text-xl text-center'>
+      <h1 className='font-bold text-primary text-xl text-center'>
         Github Commit Activity
       </h1>
-      <GithubHeadMap username={'rezaaditama'}></GithubHeadMap>
+      <GithubHeadMap username={'rezaaditama'} />
     </>
   );
 };
