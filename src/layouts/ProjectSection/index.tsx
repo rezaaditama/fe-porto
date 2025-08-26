@@ -36,7 +36,10 @@ const ProjectSection = () => {
         quas ullam enim delectus cum, numquam reiciendis inventore consectetur
         tenetur consequatur eos rem perferendis ea`}
           />
-          <Card.Footer url={'https://github.com/rezaaditama'} />
+          <Card.Footer
+            source_github={'https://github.com/rezaaditama'}
+            url_web={'https://github.com/rezaaditama'}
+          />
         </Card>
       </div>
     </div>

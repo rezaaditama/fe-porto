@@ -11,7 +11,7 @@ const ContactSection = lazy(() => import('../layouts/ContactSection'));
 
 const LandingPage = () => {
   return (
-    <div className='dark:bg-surface'>
+    <div className='bg-surface'>
       <Navbar />
       <HomeSection />
       <Suspense fallback={<LoadingText />}>

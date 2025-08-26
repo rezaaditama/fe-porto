@@ -32,9 +32,6 @@ const PieChartDiagram = ({ data }: PieChartDiagramProps) => {
         ]
       : ['#2563eb', '#059669', '#d97706', '#dc2626', '#0d9488', '#c026d3'];
   const isMd = useMediaQuery({ query: '(min-width: 768px)' });
-
-  console.log('tema di diagram ', theme);
-
   return (
     <div className='w-full aspect-square max-w-md mx-auto rounded-xl text-neutral/80'>
       <ResponsiveContainer width='100%' height='100%'>
@@ -43,10 +40,7 @@ const PieChartDiagram = ({ data }: PieChartDiagramProps) => {
             data={data}
             dataKey='value'
             nameKey='label'
-            cx='50%'
-            cy='50%'
             outerRadius={isMd ? 120 : 80}
-            fill='#8884d8'
             label
           >
             {data.map((_entry, index) => (

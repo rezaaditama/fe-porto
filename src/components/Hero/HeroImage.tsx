@@ -5,7 +5,7 @@ const HeroImage = () => {
         <img
           src='/assets/images/hero-1.jpeg'
           alt='Foto Profile'
-          className='rounded-full object-cover h-full w-full hover:scale-105 transition duration-300'
+          className='rounded-full object-cover h-full w-full hover:scale-105 transition duration-500'
         />
       </div>
     </div>

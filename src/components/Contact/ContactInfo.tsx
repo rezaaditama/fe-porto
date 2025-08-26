@@ -4,22 +4,22 @@ import LocationIcon from '../Icons/LocationIcon';
 
 const ContactInfo = () => {
   return (
-    <div className='bg-surface rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50 dark:border-primary/20 dark:hover:bg-slate-700/10'>
+    <div className='rounded-md border-1 p-5 border-gray-200 shadow-md h-fit animation-card dark:border-primary/20'>
       <h2 className='text-center text-2xl font-bold text-primary'>
         Contact Information
       </h2>
       <div className='space-y-5 pt-5'>
         <InfoItem
-          bgColor='bg-indigo-50'
+          bgColor='bg-indigo-100'
           title='Email Address'
           description='aditamareza04@gmail.com'
-          icon={<EmailIcon size={24} color='#6366f1' />}
+          icon={<EmailIcon size={24} className={'text-indigo-600'} />}
         />
         <InfoItem
-          bgColor='bg-indigo-50'
+          bgColor='bg-indigo-100'
           title='Location'
           description='Bogor, Indonesia'
-          icon={<LocationIcon size={24} color='#6366f1' />}
+          icon={<LocationIcon size={24} className={'text-indigo-600'} />}
         />
       </div>
     </div>

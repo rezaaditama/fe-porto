@@ -7,8 +7,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        'primary-hover': 'rgb(var(--color-primary-hover) / <alpha-value>)',
         secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        'secondary-hover': 'rgb(var(--color-secondary-hover) / <alpha-value>)',
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-hover': 'rgb(var(--color-accent-hover) / <alpha-value>)',
         neutral: 'rgb(var(--color-neutral) / <alpha-value>)',
         surface: 'rgb(var(--color-surface) / <alpha-value>)',
       },

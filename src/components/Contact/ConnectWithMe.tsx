@@ -6,39 +6,51 @@ import DownloadIcon from '../Icons/DownloadIcon';
 
 const ConnectWithMe = () => {
   return (
-    <div className='bg-surface rounded-md border-1 p-5 border-gray-200 shadow-md h-fit hover:shadow-xl hover:-translate-y-1 transition duration-300 hover:bg-slate-50 dark:border-primary/20 dark:hover:bg-transparent'>
+    <div className='mt-5 rounded-md border-1 p-5 border-gray-200 shadow-md h-fit animation-card dark:border-primary/20'>
       <h2 className='text-center text-2xl font-bold text-primary'>
         Connect With Me
       </h2>
-      <div className='flex flex-wrap justify-center'>
+      <div className='flex flex-wrap justify-center space-x-5'>
         <SocialLinkCard
-          title={'Github'}
-          className='py-2 px-4 hover:bg-gray-300'
-          url={'https://github.com/rezaaditama'}
+          label={'Github'}
+          className='py-2 px-4 hover:bg-neutral/10'
+          to={'https://github.com/rezaaditama'}
+          target='_blank'
+          rel='noreferrer'
+          variant={'square'}
           bgColor={'bg-gray-100'}
         >
           <GithubIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
-          title={'Instagram'}
-          className='p-2 hover:bg-gray-300'
-          url={'https://www.instagram.com/reza.aditama._/'}
+          label={'Instagram'}
+          className='p-2 hover:bg-neutral/10'
+          to={'https://www.instagram.com/reza.aditama._/'}
+          target='_blank'
+          rel='noreferrer'
+          variant={'square'}
           bgColor={'bg-gray-100'}
         >
           <InstagramIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
-          title={'Linkedin'}
-          className='py-2 px-3 hover:bg-gray-300'
-          url={'https://www.instagram.com/reza.aditama._/'}
+          label={'Linkedin'}
+          className='py-2 px-3 hover:bg-neutral/10'
+          to={'https://www.instagram.com/reza.aditama._/'}
+          target='_blank'
+          rel='noreferrer'
+          variant={'square'}
           bgColor={'bg-gray-100'}
         >
           <LinkedinIcon size={35} className={'text-neutral/80'} />
         </SocialLinkCard>
         <SocialLinkCard
-          title={'CV'}
-          className='py-2 px-4 hover:bg-gray-300'
-          url={'https://www.instagram.com/reza.aditama._/'}
+          label={'CV'}
+          className='py-2 px-4 hover:bg-neutral/10'
+          to={'https://www.instagram.com/reza.aditama._/'}
+          target='_blank'
+          rel='noreferrer'
+          variant={'square'}
           bgColor={'bg-gray-100'}
         >
           <DownloadIcon size={35} className={'text-neutral/80'} />

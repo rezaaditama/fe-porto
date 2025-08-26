@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import type { FC, ReactNode } from 'react';
 import { Link, type LinkProps } from 'react-router-dom';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'custom';
+type Variant = 'primary' | 'secondary' | 'ghost';
 
 interface RouterLinkProps extends LinkProps {
   children: ReactNode;
@@ -12,11 +12,13 @@ interface RouterLinkProps extends LinkProps {
 }
 
 const baseStyle =
-  'font-bold p-2 rounded-md cursor-pointer text-base text-center transition';
-const variantClass: Record<Exclude<Variant, 'custom'>, string> = {
-  primary: 'bg-slate-800 text-white hover:bg-slate-950',
-  secondary: 'bg-yellow-500 text-white hover:bg-yellow-600',
-  ghost: 'bg-transparent text-slate-800',
+  'font-bold py-2 rounded-md cursor-pointer text-base text-center transition duration-300';
+const variantClass: Record<Variant, string> = {
+  primary:
+    'bg-secondary text-white hover:bg-secondary-hover dark:bg-primary dark:hover:bg-primary-hover',
+  secondary:
+    'bg-accent text-white hover:bg-accent-hover dark:bg-transparent dark:border dark:border-primary dark:text-primary dark:hover:border-primary-hover dark:hover:text-primary-hover',
+  ghost: 'bg-transparent',
 };
 
 const RouterLink: FC<RouterLinkProps> = ({
@@ -29,11 +31,7 @@ const RouterLink: FC<RouterLinkProps> = ({
   return (
     <Link
       to={to}
-      className={clsx(
-        baseStyle,
-        variant !== 'custom' && variantClass[variant],
-        className
-      )}
+      className={clsx(baseStyle, variantClass[variant], className)}
       {...props}
     >
       {children}

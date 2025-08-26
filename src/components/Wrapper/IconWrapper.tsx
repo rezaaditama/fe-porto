@@ -7,10 +7,10 @@ interface IconWrapperProps {
   children: ReactNode;
   bgColor?: string;
   variant?: Variant;
-  className?: string;
+  className: string;
 }
 
-const baseStyle = 'w-fit';
+const baseStyle = 'w-fit h-fit';
 const variantClass = {
   circle: 'rounded-full',
   square: 'rounded-md',

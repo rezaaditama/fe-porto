@@ -2,31 +2,33 @@ import type { ReactNode } from 'react';
 import { RouterLink } from '../Navigate';
 import IconWrapper from './IconWrapper';
 import clsx from 'clsx';
+import type { LinkProps } from 'react-router-dom';
 
 type Variant = 'circle' | 'square';
 
-interface SocialLinkCardProps {
+interface SocialLinkCardProps extends LinkProps {
   children: ReactNode;
   bgColor?: string;
   className?: string;
   variant?: Variant;
-  title?: string;
-  url: string;
+  label?: string;
+  to: string;
 }
 
 const baseStyle =
-  'w-20 aspect-square flex flex-col items-center justify-center space-y-1 rounded-lg transition duration-300 items-center aspect-square dark:bg-surface';
+  'bg-surface flex flex-col items-center justify-center space-y-1 transition duration-300';
 
 const SocialLinkCard = ({
   children,
   bgColor,
   className,
-  variant = 'square',
-  title,
-  url,
+  variant = 'circle',
+  label,
+  to,
+  ...props
 }: SocialLinkCardProps) => {
   return (
-    <RouterLink to={url} variant='custom'>
+    <RouterLink to={to} variant='ghost' {...props}>
       <IconWrapper
         variant={variant}
         bgColor={bgColor}
@@ -34,7 +36,7 @@ const SocialLinkCard = ({
       >
         {children}
         <span className='text-xs text-center font-semibold text-neutral/80'>
-          {title}
+          {label}
         </span>
       </IconWrapper>
     </RouterLink>

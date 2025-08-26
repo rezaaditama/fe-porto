@@ -4,7 +4,7 @@ import ConnectWithMe from '../../components/Contact/ConnectWithMe';
 
 const ContactSection = () => {
   return (
-    <div id='contact' className='min-h-screen w-full py-10 bg-surface'>
+    <div id='contact' className='w-full py-10'>
       <div className='space-y-3'>
         <h1 className='text-center font-bold text-3xl capitalize text-primary'>
           Get In Touch

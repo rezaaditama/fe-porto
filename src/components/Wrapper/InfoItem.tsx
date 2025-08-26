@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import IconWrapper from './IconWrapper';
 
 interface InfoItemProps {
@@ -18,7 +19,7 @@ const InfoItem = ({
   className,
 }: InfoItemProps) => {
   return (
-    <div className={`${className} flex space-x-4 items-center`}>
+    <div className={clsx('flex space-x-4 items-center', className)}>
       <IconWrapper bgColor={bgColor} className={'p-2'}>
         {icon}
       </IconWrapper>

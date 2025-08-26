@@ -19,7 +19,7 @@ const Footer = () => {
             efisien menggunakan ekosistem JavaScript modern.
           </p>
         </div>
-        <div className='flex text-white items-center flex-col space-y-2'>
+        <div className='flex items-center flex-col space-y-2'>
           <h1 className='text-white font-bold capitalize text-xl dark:text-primary'>
             Quick Links
           </h1>
@@ -40,9 +40,11 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-          <div className='flex space-x-3'>
+          <div className='flex flex-wrap space-x-5'>
             <RouterLink
               variant={'ghost'}
+              target='_blank'
+              rel='noreferrer'
               to={'https://www.github.com/rezaaditama'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
@@ -53,6 +55,8 @@ const Footer = () => {
             </RouterLink>
             <RouterLink
               variant={'ghost'}
+              target='_blank'
+              rel='noreferrer'
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
@@ -63,6 +67,8 @@ const Footer = () => {
             </RouterLink>
             <RouterLink
               variant={'ghost'}
+              target='_blank'
+              rel='noreferrer'
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
@@ -77,7 +83,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='text-center text-sm text-gray-400 mt-10 border-gray-800 border-t dark:border-primary/30'>
-        <p className='py-2'>
+        <p className='pt-2'>
           © 2025 Reza Aditama - Front End Developer. All Rights Reserved
         </p>
       </div>
