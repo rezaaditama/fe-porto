@@ -1,11 +1,9 @@
 interface GithubIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const GithubIcon = ({
-  size,
   className,
   ariaLabel = 'Github Icon',
 }: GithubIconProps) => {
@@ -13,8 +11,6 @@ const GithubIcon = ({
     <svg
       viewBox='0 0 20 20'
       fill='currentColor'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

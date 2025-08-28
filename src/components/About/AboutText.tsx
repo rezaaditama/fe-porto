@@ -16,12 +16,15 @@ const AboutText = () => {
             antarmuka pengguna (UI) modern. Saya menggunakan React sebagai
             library utama, didukung oleh Vite untuk proses development yang
             cepat serta Tailwind CSS untuk menciptakan tampilan yang bersih dan
-            responsif. Saya terbiasa membangun arsitektur komponen berdasarkan
-            prinsip Atomic Design dan menulis kode dengan TypeScript untuk
-            menjaga kualitas serta skalabilitas.
+            responsif.{' '}
+            <span className='hidden md:inline'>
+              Saya terbiasa membangun arsitektur komponen berdasarkan prinsip
+              Atomic Design dan menulis kode dengan TypeScript untuk menjaga
+              kualitas serta skalabilitas.
+            </span>
           </p>
         </div>
-        <div className='space-y-4 flex flex-col mt-5'>
+        <div className='space-y-3 flex flex-col mt-3 md:mt-5 mf:space-y-5'>
           <InfoItem
             bgColor={'bg-blue-100'}
             title='Education'
@@ -29,20 +32,22 @@ const AboutText = () => {
               'Program Studi Teknik Informatika - Universitas Ibn Khaldun Bogor'
             }
             detail={'Tahun 2023 - Sekarang'}
-            icon={<EducationIcon size={50} className={'text-blue-800'} />}
+            icon={<EducationIcon className={'text-blue-800 w-10 md:w-13'} />}
           />
           <InfoItem
             bgColor='bg-yellow-100'
             title='Learning Focus'
             description='React, JavaScript, Typescript, Tailwind CSS'
-            icon={<BookIcon size={50} className={'text-yellow-400'} />}
+            icon={<BookIcon className={'text-yellow-400 w-10 md:w-13'} />}
           />
           <InfoItem
             bgColor='bg-green-100'
             title='Availability'
             description='Tersedia untuk magang atau freelance remote.'
             icon={
-              <AvailableIcon size={50} className={'text-green-700 scale-80'} />
+              <AvailableIcon
+                className={'text-green-700 scale-80 w-10 md:w-13'}
+              />
             }
           />
         </div>

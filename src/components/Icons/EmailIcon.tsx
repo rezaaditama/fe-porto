@@ -1,20 +1,13 @@
 interface EmailIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
-const EmailIcon = ({
-  size,
-  className,
-  ariaLabel = 'Email Icon',
-}: EmailIconProps) => {
+const EmailIcon = ({ className, ariaLabel = 'Email Icon' }: EmailIconProps) => {
   return (
     <svg
       viewBox='0 0 24 24'
       fill='currentColor'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

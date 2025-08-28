@@ -14,13 +14,13 @@ const ThemeToogle = () => {
       onClick={toggleTheme}
     >
       <MoonIcon
-        size={24}
+        size={20}
         className={
           'absolute left-1 transition-opacity duration-300 text-blue-400 opacity-0 dark:opacity-100'
         }
       />
       <SunIcon
-        size={24}
+        size={20}
         className={
           'absolute right-1 transition-opacity duration-300 text-yellow-500 opacity-100 dark:opacity-0'
         }

@@ -7,10 +7,10 @@ import DownloadIcon from '../Icons/DownloadIcon';
 const ConnectWithMe = () => {
   return (
     <div className='mt-5 rounded-md border-1 p-5 border-gray-200 shadow-md h-fit animation-card dark:border-primary/20'>
-      <h2 className='text-center text-2xl font-bold text-primary'>
+      <h2 className='text-center text-xl font-bold text-primary md:text-2xl'>
         Connect With Me
       </h2>
-      <div className='flex flex-wrap justify-center space-x-5'>
+      <div className='grid grid-cols-2 md:grid-cols-4 justify-items-center items-center'>
         <SocialLinkCard
           label={'Github'}
           className='py-2 px-4 hover:bg-neutral/10'
@@ -20,7 +20,7 @@ const ConnectWithMe = () => {
           variant={'square'}
           bgColor={'bg-gray-100'}
         >
-          <GithubIcon size={35} className={'text-neutral/80'} />
+          <GithubIcon className={'text-neutral/80 w-10'} />
         </SocialLinkCard>
         <SocialLinkCard
           label={'Instagram'}
@@ -31,7 +31,7 @@ const ConnectWithMe = () => {
           variant={'square'}
           bgColor={'bg-gray-100'}
         >
-          <InstagramIcon size={35} className={'text-neutral/80'} />
+          <InstagramIcon className={'text-neutral/80 w-10'} />
         </SocialLinkCard>
         <SocialLinkCard
           label={'Linkedin'}
@@ -42,7 +42,7 @@ const ConnectWithMe = () => {
           variant={'square'}
           bgColor={'bg-gray-100'}
         >
-          <LinkedinIcon size={35} className={'text-neutral/80'} />
+          <LinkedinIcon className={'text-neutral/80 w-10'} />
         </SocialLinkCard>
         <SocialLinkCard
           label={'CV'}
@@ -53,7 +53,7 @@ const ConnectWithMe = () => {
           variant={'square'}
           bgColor={'bg-gray-100'}
         >
-          <DownloadIcon size={35} className={'text-neutral/80'} />
+          <DownloadIcon className={'text-neutral/80 w-10'} />
         </SocialLinkCard>
       </div>
     </div>

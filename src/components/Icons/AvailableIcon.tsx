@@ -1,11 +1,9 @@
 interface AvailableIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const AvailableIcon = ({
-  size,
   className,
   ariaLabel = 'Focus Icon',
 }: AvailableIconProps) => {
@@ -13,8 +11,6 @@ const AvailableIcon = ({
     <svg
       viewBox='0 0 64 64'
       fill='currentColor'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

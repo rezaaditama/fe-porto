@@ -1,11 +1,9 @@
 interface LinkedinIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const LinkedinIcon = ({
-  size,
   className,
   ariaLabel = 'Linkedin Icon',
 }: LinkedinIconProps) => {
@@ -13,8 +11,6 @@ const LinkedinIcon = ({
     <svg
       viewBox='0 0 24 24'
       fill='currentColor'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

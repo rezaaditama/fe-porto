@@ -5,7 +5,7 @@ const HomeSection = () => {
   return (
     <div
       id='home'
-      className='w-full bg-gray-200/40 min-h-screen grid grid-cols-1 md:grid-cols-2 gap-x-10 px-10 pt-11 md:pt-14 dark:bg-surface'
+      className='w-full bg-gray-200/40 pt-24 gap-y-5 grid grid-cols-1 gap-x-10 px-10 md:pt-14 dark:bg-surface md:grid-cols-2 md:min-h-screen'
     >
       <div className='order-2 md:order-1 flex'>
         <HeroText />

@@ -5,18 +5,18 @@ const ProjectSection = () => {
   return (
     <div
       id='project'
-      className='min-h-screen w-full px-5 bg-slate-100 py-10 dark:bg-surface'
+      className='w-full px-5 bg-slate-100 py-10 dark:bg-surface md:min-h-screen'
     >
-      <div className='space-y-3'>
-        <h1 className='text-3xl font-bold uppercase text-center text-primary'>
+      <div className='space-y-2 md:space-y-3'>
+        <h1 className='text-2xl font-bold uppercase text-center text-primary md:text-3xl'>
           Featured Projects
         </h1>
-        <p className='text-center text-neutral/50 text-base'>
+        <p className='text-center text-neutral/50 text-sm md:text-base'>
           Berikut beberapa proyek yang saya kerjakan dalam membangun aplikasi
           dan website yang fungsional, responsif dan menarik secara visual.
         </p>
       </div>
-      <div className='grid md:grid-cols-3 gap-5 pt-10'>
+      <div className='grid grid-cols-1 gap-5 py-8 scale-95 md:scale-none md:grid-cols-3'>
         <Card>
           <Card.Header
             path='/assets/images/project-1.png'

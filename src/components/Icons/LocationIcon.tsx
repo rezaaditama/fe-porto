@@ -1,11 +1,9 @@
 interface LocationIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const LocationIcon = ({
-  size,
   className,
   ariaLabel = 'Location Icon',
 }: LocationIconProps) => {
@@ -17,8 +15,6 @@ const LocationIcon = ({
       strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

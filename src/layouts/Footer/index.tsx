@@ -7,8 +7,8 @@ import LinkedinIcon from '../../components/Icons/LinkedinIcon';
 const Footer = () => {
   return (
     <footer className='px-10 py-5 bg-slate-950 dark:bg-surface dark:border-t dark:border-primary/30'>
-      <div className='grid grid-cols-2'>
-        <div>
+      <div className='grid grid-cols-1 md:grid-cols-2'>
+        <div className='hidden md:block'>
           <h1 className='text-2xl font-bold uppercase text-white dark:text-primary'>
             Reza Aditama
           </h1>
@@ -19,7 +19,7 @@ const Footer = () => {
             efisien menggunakan ekosistem JavaScript modern.
           </p>
         </div>
-        <div className='flex items-center flex-col space-y-2'>
+        <div className='flex items-center flex-col space-y-1 md:space-y-2'>
           <h1 className='text-white font-bold capitalize text-xl dark:text-primary'>
             Quick Links
           </h1>
@@ -48,10 +48,7 @@ const Footer = () => {
               to={'https://www.github.com/rezaaditama'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
-              <GithubIcon
-                size={24}
-                className='text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
-              />
+              <GithubIcon className='text-gray-400 w-5 transition duration-300 hover:text-white dark:hover:text-primary' />
             </RouterLink>
             <RouterLink
               variant={'ghost'}
@@ -60,10 +57,7 @@ const Footer = () => {
               to={'https://www.instagram.com/reza.aditama._/'}
               className='cursor-pointer flex flex-col w-fit rounded-md items-center'
             >
-              <InstagramIcon
-                className='text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
-                size={24}
-              />
+              <InstagramIcon className='text-gray-400 w-5 transition duration-300 hover:text-white dark:hover:text-primary' />
             </RouterLink>
             <RouterLink
               variant={'ghost'}
@@ -74,9 +68,8 @@ const Footer = () => {
             >
               <LinkedinIcon
                 className={
-                  'text-gray-400 transition duration-300 hover:text-white dark:hover:text-primary'
+                  'text-gray-400 w-5 transition duration-300 hover:text-white dark:hover:text-primary'
                 }
-                size={24}
               />
             </RouterLink>
           </div>

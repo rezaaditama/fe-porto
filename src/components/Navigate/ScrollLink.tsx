@@ -11,7 +11,7 @@ interface ScrollLinkProps extends Omit<LinkProps, 'ref'> {
 }
 
 const baseStyle =
-  'font-bold py-2 rounded-md cursor-pointer text-base text-center transition duration-300';
+  'font-bold py-1.5 rounded-md cursor-pointer text-base text-center transition duration-300 md:py-2';
 const variantClass: Record<Variant, string> = {
   primary:
     'bg-secondary text-white hover:bg-secondary-hover dark:bg-primary dark:hover:bg-primary-hover',

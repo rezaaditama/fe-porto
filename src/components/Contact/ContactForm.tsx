@@ -9,7 +9,7 @@ interface ContactFormProps extends FormHTMLAttributes<HTMLFormElement> {
 const ContactForm = ({ onSubmit, ...props }: ContactFormProps) => {
   return (
     <div className='rounded-md border-1 p-5 h-fit border-gray-200 shadow-md animation-card dark:border-primary/20'>
-      <h2 className='text-center text-2xl font-bold text-primary'>
+      <h2 className='text-center text-xl font-bold text-primary md:text-2xl'>
         Send Me a Message
       </h2>
       <form onSubmit={onSubmit} className='space-y-2 pt-5' {...props}>

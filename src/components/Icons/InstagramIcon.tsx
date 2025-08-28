@@ -1,11 +1,9 @@
 interface InstagramIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const InstagramIcon = ({
-  size,
   className,
   ariaLabel = 'Instagram Icon',
 }: InstagramIconProps) => {
@@ -14,8 +12,6 @@ const InstagramIcon = ({
       viewBox='0 0 24 24'
       fill='currentColor'
       className={className}
-      width={size}
-      height={size}
       role='img'
       aria-label={ariaLabel}
     >

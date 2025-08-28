@@ -16,7 +16,7 @@ const HeroText = () => {
         <div className='space-x-4 flex justify-center'>
           <ScrollLink
             variant='primary'
-            className='w-full text-lg'
+            className='w-full text-lg '
             to='about'
             offset={-70}
           >

@@ -8,11 +8,11 @@ const activeClass = 'font-bold text-xl text-primary';
 const Navbar = () => {
   return (
     <nav className='w-full flex justify-center fixed top-3 z-50'>
-      <div className='px-10 w-[95vw] py-5 rounded-md backdrop-blur-md bg-surface/90 shadow-md grid grid-cols-2 md:grid-cols-3'>
-        <h1 className='font-extrabold capitalize text-primary text-2xl'>
+      <div className='px-5 w-[95vw] py-5 rounded-md backdrop-blur-md bg-surface/90 shadow-md grid grid-cols-2 md:grid-cols-3 md:px-10'>
+        <h1 className='capitalize text-primary md:text-2xl text-lg font-extrabold'>
           ✨my portofolio
         </h1>
-        <div className='space-x-5 font-semibold text-center'>
+        <div className='space-x-5 font-semibold text-center hidden md:block'>
           {['home', 'about', 'project', 'contact'].map((section) => (
             <ScrollLink
               key={section}

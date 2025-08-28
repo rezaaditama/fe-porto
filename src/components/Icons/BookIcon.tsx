@@ -1,14 +1,9 @@
 interface BookIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
-const BookIcon = ({
-  size,
-  className,
-  ariaLabel = 'Focus Icon',
-}: BookIconProps) => {
+const BookIcon = ({ className, ariaLabel = 'Focus Icon' }: BookIconProps) => {
   return (
     <svg
       viewBox='0 0 24 24'
@@ -17,8 +12,6 @@ const BookIcon = ({
       strokeWidth='1'
       strokeLinecap='round'
       strokeLinejoin='round'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

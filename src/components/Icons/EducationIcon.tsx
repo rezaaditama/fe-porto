@@ -1,11 +1,9 @@
 interface EducationIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const EducationIcon = ({
-  size,
   className,
   ariaLabel = 'Education Icon',
 }: EducationIconProps) => {
@@ -13,8 +11,6 @@ const EducationIcon = ({
     <svg
       viewBox='0 0 48 48'
       fill='currentColor'
-      width={size}
-      height={size}
       className={className}
       aria-label={ariaLabel}
       role='img'

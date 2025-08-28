@@ -63,7 +63,7 @@ export default PieChartDiagram;
 const renderLegend = (props: any) => {
   const { payload } = props;
   return (
-    <ul className='text-sm md:text-base flex flex-wrap justify-center gap-x-2 sm:mt-3'>
+    <ul className='text-sm md:text-base flex flex-wrap justify-center gap-x-2 mt-3'>
       {payload.map((entry: any, index: number) => (
         <li key={`item-${index}`} className='flex items-center space-x-2'>
           <span

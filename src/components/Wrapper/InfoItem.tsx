@@ -30,7 +30,7 @@ const InfoItem = ({
           {detail && (
             <>
               <br />
-              <span className='text-neutral/70'>{detail}</span>
+              <span className='text-neutral/70 text-xs'>{detail}</span>
             </>
           )}
         </p>

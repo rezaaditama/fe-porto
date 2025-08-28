@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyle =
-  'font-bold p-2 rounded-md cursor-pointer text-base text-center transition';
+  'font-bold p-1.5 rounded-md cursor-pointer text-base text-center transition';
 
 const variantClass = {
   primary: 'bg-secondary text-white hover:bg-slate-950 dark:bg-primary',

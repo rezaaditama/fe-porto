@@ -1,11 +1,9 @@
 interface DownloadIconProps {
-  size: number;
   className?: string;
   ariaLabel?: string;
 }
 
 const DownloadIcon = ({
-  size,
   className,
   ariaLabel = 'Instagram Icon',
 }: DownloadIconProps) => {
@@ -14,8 +12,6 @@ const DownloadIcon = ({
       viewBox='0 0 45.057 45.057'
       fill='currentColor'
       className={className}
-      width={size}
-      height={size}
       role='img'
       aria-label={ariaLabel}
     >

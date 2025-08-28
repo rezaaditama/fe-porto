@@ -25,7 +25,7 @@ const AboutDiagram = () => {
   }, []);
   return (
     <>
-      <h1 className='text-center font-bold text-primary text-xl'>
+      <h1 className='text-center font-bold text-primary text-base md:text-xl'>
         Github Activity Language
       </h1>
       <PieChartDiagram data={skills} />
