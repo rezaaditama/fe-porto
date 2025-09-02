@@ -17,10 +17,10 @@ export const useTheme = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toogleTheme = () => {
+  const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
   console.log(theme);
-  return { theme, toogleTheme };
+  return { theme, toggleTheme };
 };

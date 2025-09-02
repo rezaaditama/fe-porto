@@ -8,7 +8,7 @@ type GithubHeadMapProps = {
 const GithubHeadMap = ({ username }: GithubHeadMapProps) => {
   const { theme } = useTheme();
   return (
-    <div className='w-full overflow-x-auto'>
+    <div className='w-full overflow-x-auto text-neutral/80'>
       <GitHubCalendar
         username={username}
         blockSize={18}

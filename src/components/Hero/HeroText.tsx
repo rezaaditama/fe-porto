@@ -3,15 +3,14 @@ import { ScrollLink } from '../Navigate';
 const HeroText = () => {
   return (
     <div className='flex items-center justify-center flex-col'>
-      <div className='space-y-3'>
+      <div className='space-y-5'>
         <h1 className='text-2xl font-bold text-center text-neutral md:text-left md:text-5xl'>
           Halo, Saya<span className='text-primary'> Reza Aditama </span>
         </h1>
         <p className='text-justify leading-tight tracking-wide text-base text-neutral dark:text-neutral/70'>
           Saya seorang <span className='font-bold'> Frontend Developer </span>
-          yang fokus pada pengembangan UI dengan React + Vite dan Tailwind CSS.
-          Saya senang membangun antarmuka yang cepat, responsif dan efisien
-          menggunakan ekosistem JavaScript modern.
+          yang berfokus pada pengembangan antarmuka modern dengan React,
+          TypeScript dan Tailwind CSS.
         </p>
         <div className='space-x-4 flex justify-center'>
           <ScrollLink

@@ -5,7 +5,7 @@ const ProjectSection = () => {
   return (
     <div
       id='project'
-      className='w-full px-5 bg-slate-100 py-10 dark:bg-surface md:min-h-screen'
+      className='w-full px-5 bg-slate-100 dark:bg-surface md:py-10 md:min-h-screen'
     >
       <div className='space-y-2 md:space-y-3'>
         <h1 className='text-2xl font-bold uppercase text-center text-primary md:text-3xl'>
@@ -16,7 +16,7 @@ const ProjectSection = () => {
           dan website yang fungsional, responsif dan menarik secara visual.
         </p>
       </div>
-      <div className='grid grid-cols-1 gap-5 py-8 scale-95 md:scale-none md:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-5 py-5 scale-95 md:scale-none md:grid-cols-3'>
         <Card>
           <Card.Header
             path='/assets/images/project-1.png'

@@ -1,36 +1,51 @@
+import { useState } from 'react';
+import HamburgerBarIcon from '../../components/Icons/HamburgerBarIcon';
 import { ScrollLink } from '../../components/Navigate';
 import ThemeToogle from '../../components/Toogle/ThemeToogle';
+import Sidebar from '../../components/Sidebar';
 
 const linkClass =
   'text-lg text-neutral/50 cursor-pointer transition duration-300 hover:text-primary/80';
 const activeClass = 'font-bold text-xl text-primary';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='w-full flex justify-center fixed top-3 z-50'>
-      <div className='px-5 w-[95vw] py-5 rounded-md backdrop-blur-md bg-surface/90 shadow-md grid grid-cols-2 md:grid-cols-3 md:px-10'>
-        <h1 className='capitalize text-primary md:text-2xl text-lg font-extrabold'>
-          ✨my portofolio
-        </h1>
-        <div className='space-x-5 font-semibold text-center hidden md:block'>
-          {['home', 'about', 'project', 'contact'].map((section) => (
-            <ScrollLink
-              key={section}
-              to={section}
-              variant='ghost'
-              offset={-70}
-              activeClass={activeClass}
-              className={linkClass}
+    <>
+      <Sidebar isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} />
+      <nav className='w-full flex justify-center fixed top-3 z-10'>
+        <div className='px-5 w-[95vw] py-5 rounded-md backdrop-blur-md bg-surface/90 shadow-md grid grid-cols-2 md:grid-cols-3 md:px-10'>
+          <h1 className='capitalize text-primary md:text-2xl text-lg font-extrabold'>
+            ✨my portofolio
+          </h1>
+          <div className='space-x-5 font-semibold text-center hidden md:block'>
+            {['home', 'about', 'project', 'contact'].map((section) => (
+              <ScrollLink
+                key={section}
+                to={section}
+                variant='ghost'
+                offset={-70}
+                activeClass={activeClass}
+                className={linkClass}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </ScrollLink>
+            ))}
+          </div>
+          <div className='flex justify-end items-center space-x-2'>
+            <ThemeToogle />
+            <button
+              onClick={() => {
+                setIsOpen(true);
+                console.log(isOpen);
+              }}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </ScrollLink>
-          ))}
+              <HamburgerBarIcon className='w-6 h-5 text-gray-500 block md:hidden' />
+            </button>
+          </div>
         </div>
-        <div className='flex justify-end'>
-          <ThemeToogle />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

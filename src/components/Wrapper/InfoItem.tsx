@@ -19,18 +19,22 @@ const InfoItem = ({
   className,
 }: InfoItemProps) => {
   return (
-    <div className={clsx('flex space-x-4 items-center', className)}>
-      <IconWrapper bgColor={bgColor} className={'p-2'}>
+    <div className={clsx('flex gap-3 items-center md:gap-4', className)}>
+      <IconWrapper bgColor={bgColor} className={'p-1.5 shrink-0 md:p-2'}>
         {icon}
       </IconWrapper>
       <div>
-        <h2 className='font-bold text-base text-primary'>{title}</h2>
-        <p className='text-sm leading-tight text-neutral'>
+        <h2 className='font-bold text-sm text-primary leading-tight md:text-base'>
+          {title}
+        </h2>
+        <p className='text-xs text-neutral leading-snug md:text-sm'>
           {description}
           {detail && (
             <>
               <br />
-              <span className='text-neutral/70 text-xs'>{detail}</span>
+              <span className='text-neutral/70 text-[11px] md:text-xs'>
+                {detail}
+              </span>
             </>
           )}
         </p>

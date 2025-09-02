@@ -11,17 +11,21 @@ const AboutText = () => {
       </h1>
       <div>
         <div>
-          <p className='text-wrap text-justify leading-tight tracking-wide text-base text-neutral'>
+          <p className='text-wrap text-justify leading-tight tracking-wide text-base text-neutral hidden md:block'>
             Saya adalah seorang Frontend Developer yang fokus pada pengembangan
             antarmuka pengguna (UI) modern. Saya menggunakan React sebagai
             library utama, didukung oleh Vite untuk proses development yang
             cepat serta Tailwind CSS untuk menciptakan tampilan yang bersih dan
-            responsif.{' '}
-            <span className='hidden md:inline'>
-              Saya terbiasa membangun arsitektur komponen berdasarkan prinsip
-              Atomic Design dan menulis kode dengan TypeScript untuk menjaga
-              kualitas serta skalabilitas.
-            </span>
+            responsif. Saya terbiasa membangun arsitektur komponen berdasarkan
+            prinsip Atomic Design dan menulis kode dengan TypeScript untuk
+            menjaga kualitas serta skalabilitas. Komitmen saya adalah
+            mengembangkan aplikasi yang mudah dipelihara (maintainable) dan
+            dapat diskalakan (scalable) untuk jangka panjang.
+          </p>
+          <p className='text-wrap text-justify leading-tight tracking-wide text-base text-neutral block md:hidden'>
+            Saya adalah seorang Frontend Developer yang berfokus pada
+            pengembangan antarmuka pengguna (UI) modern menggunakan React, Vite,
+            dan Tailwind CSS.
           </p>
         </div>
         <div className='space-y-3 flex flex-col mt-3 md:mt-5 mf:space-y-5'>
